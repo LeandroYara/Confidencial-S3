@@ -9,9 +9,9 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def cita_view(request,id):
     if request.method == 'GET':
-        psicologo_dto = lc.get_cita(id)
-        psicologo = serializers.serialize('json',[psicologo_dto,])
-        return HttpResponse(psicologo, 'application/json')
+        cita_dto = lc.get_cita(id)
+        cita = serializers.serialize('json',[cita_dto,])
+        return HttpResponse(cita, 'application/json')
 
     
 @csrf_exempt

@@ -19,6 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.cita_view_noid, name='cita_view_noid'),
-    path("<int:id", views.cita_view, name='cita_view')
+    path('citas/<int:idCita>', views.cita_view_noid, name='cita_view_noid'),
+    path('citas/', views.cita_view, name='cita_view')
 ]
